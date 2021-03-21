@@ -15,7 +15,7 @@ before_deploy:
 deploy:
   provider: script
   script:
-    docker tag docker-from-zero-mastery-java:latest danilooliveira99/docker-from-zero-mastery-java:$TRAVIS_JOB_ID
+    docker tag docker-from-zero-mastery-java:latest danilooliveira99/docker-from-zero-mastery-java:$TRAVIS_JOB_ID;
     docker push danilooliveira99/docker-from-zero-mastery-java;
   on:
     branch: main
