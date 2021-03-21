@@ -15,7 +15,8 @@ before_deploy:
 deploy:
   provider: script
   script:
-    docker push danilooliveira99/docker-from-zero-mastery-java;
+    docker tag docker-from-zero-mastery-java:latest "$DOCKER_USERNAME"/docker-from-zero-mastery-java:$TRAVIS_JOB_ID
+    docker push "$DOCKER_USERNAME"/docker-from-zero-mastery-java;
   on:
     branch: main
 notifications:
