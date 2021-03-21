@@ -21,4 +21,3 @@ deploy:
     branch: main
 notifications:
    email: false
-
